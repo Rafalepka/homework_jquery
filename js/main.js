@@ -7,10 +7,10 @@ $(function(){
         $("div").animate({"margin-left": "100px", "height": "100px", "width": "100px"}, 3000, schowajKwadrat);// animacja po kliknieciu w przycisk 
         
         function schowajKwadrat(){
-            $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
+            $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji zmiany koloru
         };
         
-        function zmienKolor() { //funkcja zmiany koloru kwadratu po click w przycisk
+        function zmienKolor() { //funkcja zmiany koloru kwadratu po clicku w przycisk
             
            $("div").css({"background-color": "blue"}).fadeIn(5000, napis); // pojawienie sie kwadratu o wybranym kolorze i wywolanie funkcji pokazujacej napis
 			
