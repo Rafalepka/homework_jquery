@@ -10,7 +10,7 @@ $(function(){
             $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
         };
         
-        function zmienKolor() { //funkcja zmiany koloru przycisku po click
+        function zmienKolor() { //funkcja zmiany koloru kwadratu po click w przycisk
             
            $("div").css({"background-color": "blue"}).fadeIn(5000, napis); // pojawienie sie kwadratu o wybranym kolorze i wywolanie funkcji pokazujacej napis
 			
