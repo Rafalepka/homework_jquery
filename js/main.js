@@ -4,15 +4,19 @@ $(function(){
     
     $("button").click(function(){ //funkcja click button
         
-        $("div").animate({"margin-left": "100px", "height": "100px", "width": "100px"}, 3000, niebieski); // animacja po kliknieciu w przycisk 
+        $("div").animate({"margin-left": "100px", "height": "100px", "width": "100px"}, 3000, schowajKwadrat);// animacja po kliknieciu w przycisk 
         
-        function niebieski() { //funkcja zmiany koloru przycisku po click
+        function schowajKwadrat(){
+            $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
+        };
+        
+        function zmienKolor() { //funkcja zmiany koloru przycisku po click
             
-           $("div").animate({backgroundColor: "blue"}, 5000, napis); // zmiana koloru i wywolanie napisu
+           $("div").css({"background-color": "blue"}).fadeIn(5000, napis); // pojawienie sie kwadratu o wybranym kolorze i wywolanie funkcji pokazujacej napis
 			
 			function napis() {
                 
-				$("div").add("h2").text("Gratulacje, animacja zakończona!").css({"color": "white"}); // nadanie wlasciwosci div ze pojawia się w nim napis oraz jego kolor 
+				$("div").add("h2").text("Gratulacje, animacja zakończona sukcesem!").css({"color": "white"}); // nadanie wlasciwosci div ze pojawia się w nim napis oraz jego kolor 
 			}
         }
         
