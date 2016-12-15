@@ -8,9 +8,11 @@
         
         function schowajKwadrat(){
             $("div").animate(500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
+            $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji zmiany koloru
+
         };
         
-        function zmienKolor() { //funkcja zmiany koloru przycisku po click
+        function zmienKolor() { //funkcja zmiany koloru kwadratu po clicku w przycisk
             
            $("div").css({"background-color": "blue"}).fadeIn(5000, napis); // pojawienie sie kwadratu o wybranym kolorze i wywolanie funkcji pokazujacej napis
 			
@@ -22,6 +24,7 @@
         
     });
     
+
 });*/
 
 $(function () {
