@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
    
     $("div").css({"background-color": "red", "height": "200px", "width": "200px"}); //nadanie właściwości div
     
@@ -7,7 +7,7 @@ $(function(){
         $("div").animate({"margin-left": "100px", "height": "100px", "width": "100px"}, 3000, schowajKwadrat);// animacja po kliknieciu w przycisk 
         
         function schowajKwadrat(){
-            $("div").fadeOut(2500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
+            $("div").animate(500, zmienKolor); //ukrycie kwadratu i wywolanie funkcji ukazujacej go i pokazujacej napis wewnatrz
         };
         
         function zmienKolor() { //funkcja zmiany koloru przycisku po click
@@ -22,4 +22,38 @@ $(function(){
         
     });
     
+});*/
+
+$(function () {
+
+	$("div").css({
+		"background-color": "red",
+		"height": "200px",
+		"width": "200px"
+	});
+
+	$("button").click(function () {
+
+		$("div").animate({
+			"margin-left": "100px",
+			"height": "100px",
+			"width": "100px"
+		}, 3000, zmienKolor);
+
+		function zmienKolor() {
+
+			$("div").animate({
+				"backgroundColor": "blue"
+			}, 5000, dodajNapis);
+
+			function dodajNapis() {
+//                $('div').animate({"width": "250px"}, 1000);
+				$("div").add("h2").text("Gratulacje, animacja zakończona! :):):)").css({"color": "white", "fontStyle": "italic",});
+                
+			}
+		}
+
+	});
+
 });
+                       
